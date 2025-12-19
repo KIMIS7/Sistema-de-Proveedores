@@ -70,6 +70,10 @@ Antes de comenzar, asegúrate de tener instalado:
 - **npm** (v9 o superior) - Incluido con Node.js
 - **PostgreSQL** (v15 o superior) - [Descargar](https://www.postgresql.org/download/)
 - **Git** - [Descargar](https://git-scm.com/)
+- **Angular CLI** (v21) - Framework frontend
+- **NestJS CLI** - Framework backend
+
+
 
 ### Verificar instalación:
 
@@ -77,6 +81,23 @@ Antes de comenzar, asegúrate de tener instalado:
 node --version    # v18.x.x o superior
 npm --version     # 9.x.x o superior
 psql --version    # 15.x o superior
+```
+
+### Instalar CLIs globales:
+
+```bash
+# Angular CLI (versión 21)
+npm install -g @angular/cli@21
+
+# NestJS CLI
+npm install -g @nestjs/cli
+```
+
+### Verificar CLIs:
+
+```bash
+ng version        # Angular CLI: 21.x.x
+nest --version    # 11.x.x o superior
 ```
 
 ---
@@ -414,4 +435,3 @@ curl -X POST http://localhost:3000/api/rates \
   -d '{"price": 600, "startDate": "2025-03-01", "endDate": "2025-09-30", "currency": "USD", "serviceId": 1}'
 # Respuesta: {"statusCode":400,"message":"Ya existe un tarifario con fechas que se solapan"}
 ```
-
